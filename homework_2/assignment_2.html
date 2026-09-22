@@ -2301,9 +2301,27 @@ $ AGE_ENTRY      &lt;chr&gt; &quot;20.28374137&quot;, &quot;23.60797466&quot;, &
 $ ICLEVEL        &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 2, 3…</code></pre>
 </div>
 </div>
+</section>
+<section id="task-3-use-tidyverse-to-select-instnm-sat_avg-and-adm_rate" class="level2">
+<h2 class="anchored" data-anchor-id="task-3-use-tidyverse-to-select-instnm-sat_avg-and-adm_rate">Task 3: Use tidyverse to select INSTNM, SAT_AVG, and ADM_RATE</h2>
+<p>The <code>select</code> function of <code>dplyr</code> is used to save a subset of the data only including the columns INSTNM, SAT_AVG, and ADM_RATE.</p>
+<div class="cell" data-layout-align="center">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>college.subset <span class="ot">&lt;-</span> college.data <span class="sc">|&gt;</span> <span class="fu">select</span>(INSTNM,SAT_AVG,ADM_RATE)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(college.subset)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 3
+  INSTNM                              SAT_AVG ADM_RATE
+  &lt;chr&gt;                                 &lt;dbl&gt;    &lt;dbl&gt;
+1 Alabama A &amp; M University                849    0.874
+2 University of Alabama at Birmingham    1125    0.581
+3 Amridge University                       NA   NA    
+4 University of Alabama in Huntsville    1257    0.763
+5 Alabama State University                825    0.459
+6 The University of Alabama              1202    0.526</code></pre>
+</div>
+</div>
 <ul>
-<li><p>Task 3: Use tidyverse to select INSTNM, SAT_AVG, and ADM_RATE</p></li>
-<li><p>Task 4: Create a scatterplot for SAT_AVG and ADM_RATE (Remove NA)</p></li>
+<li>Task 4: Create a scatterplot for SAT_AVG and ADM_RATE (Remove NA)</li>
 </ul>
 </section>
 <section id="submission" class="level2">

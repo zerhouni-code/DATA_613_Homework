@@ -52,7 +52,15 @@ The number of rows and columns in a data set can be displayed using the `glimpse
 dplyr::glimpse(college.data)
 ```
 
-- Task 3: Use tidyverse to select INSTNM, SAT_AVG, and ADM_RATE
+## Task 3: Use tidyverse to select INSTNM, SAT_AVG, and ADM_RATE
+
+The `select` function of `dplyr` is used to save a subset of the data only including the columns INSTNM, SAT_AVG, and ADM_RATE.
+
+```{r}
+college.subset <- college.data |> select(INSTNM,SAT_AVG,ADM_RATE)
+head(college.subset)
+```
+
 
 - Task 4: Create a scatterplot for SAT_AVG and ADM_RATE (Remove NA)
 
