@@ -32,17 +32,25 @@ Complete the following exercises **using only the tidyverse packages** (e.g., `d
 
 ## Task 1: Read data using a relative path
 
+We first load the necessary `tidyverse` package. Then we user `read_csv` from `readr` to store the data from the `collegedata.csv` file using a relative path. In order to form the relative path string a period, `.`, is used to point to the current directory. 
+
 ```{r}
 #| warning: false
 require(tidyverse)
 
 suppressMessages(
-  college.data <- read_csv(file = "./data/collegedata.csv")
+  college.data <- readr::read_csv(file = "./data/collegedata.csv")
 )
 head(college.data)
 ```
 
-- Task 2:Determine rows and columns
+## Task 2: Determine rows and columns
+
+The number of rows and columns in a data set can be displayed using the `str` 
+
+```{r}
+```
+
 
 - Task 3: Use tidyverse to select INSTNM, SAT_AVG, and ADM_RATE
 
