@@ -1,0 +1,83 @@
+---
+title: "Data Science Assignment 02"
+author: "Zak Zerhouni"
+date: today
+format:
+  html:
+    embed-resources: true
+editor: visual
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo       = TRUE, 
+                      fig.height = 3, 
+                      fig.width  = 6,
+                      fig.align  = "center")
+ggplot2::theme_set(ggplot2::theme_bw())
+```
+
+## Instructions
+
+Complete the following exercises **using only the tidyverse packages** (e.g., `dplyr`, `tidyr`, `ggplot2`, `readr`, `stringr`, `forcats`, `lubridate`, `purrr`, etc.)
+
+**Important:** This assignment is intended to assess your proficiency with the **tidyverse**. Solutions that use **base R** or **packages outside the tidyverse** to solve the problems will **not receive credit** unless explicitly permitted in the question.
+
+1.  Load the necessary **tidyverse** libraries.
+2.  Answer each question in a separate R code chunk.
+3.  Provide a detailed explanation of your approach for each solution.
+4.  Render your R Markdown document to an HTML file.
+5.  Submit the rendered HTML file to Canvas.
+
+# Questions:
+
+## Task 1: Read data using a relative path
+
+```{r}
+#| warning: false
+require(tidyverse)
+
+suppressMessages(
+  college.data <- read_csv(file = "./data/collegedata.csv")
+)
+head(college.data)
+```
+
+- Task 2:Determine rows and columns
+
+- Task 3: Use tidyverse to select INSTNM, SAT_AVG, and ADM_RATE
+
+- Task 4: Create a scatterplot for SAT_AVG and ADM_RATE (Remove NA)
+
+## Submission
+
+- After completing **each question**, save your Quarto file, render it, then **stage and commit** your changes.
+
+- Each commit should:
+
+  - Represent **one logical change**.
+  - Have a **short, descriptive** commit message.
+  - Be written in the **present tense** (imperative mood).
+
+  **Examples:**
+
+  **Bad:** `Fix bug in the project` *Too vague—it does not explain which bug was fixed.*
+
+  **Bad:** `Fixed crash on login screen when password is empty` *Uses the past tense.*
+
+  **Good:** `Fix crash on login screen when password is empty`
+
+- Include well-commented code and clear explanations for each solution.
+
+- Make **at least one meaningful commit per question/part** (a minimum of **4 meaningful commits**).
+
+- **Push your work to your** GitHub\*\*. ane post the link on the text bar of the Canvas assignment.
+
+- Assignments that are **not pushed to GitHub** will receive **no more than 60% of the available points**.
+
+- Submit the rendered HTML file to **Canvas**. Assignments that are **not submitted to Canvas** will also receive **no more than 60% of the available points**.
+
+- If you forget to submit your work to **GitHub** or **Canvas**, you have **up to three (3) days** after the due date to correct the submission. A **10% late penalty** will be applied to the assignment. **After three days, no submissions or corrections will be accepted.**
+
+- **No corrections, re-submissions, or missing submissions will be accepted after the assignment has been graded**, including forgotten GitHub or Canvas submissions.
+
+**Good luck!**
