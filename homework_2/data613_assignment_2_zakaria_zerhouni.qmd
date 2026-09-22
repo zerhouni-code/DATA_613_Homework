@@ -32,7 +32,7 @@ Complete the following exercises **using only the tidyverse packages** (e.g., `d
 
 ## Task 1: Read data using a relative path
 
-We first load the necessary `tidyverse` package. Then we user `read_csv` from `readr` to store the data from the `collegedata.csv` file using a relative path. In order to form the relative path string a period, `.`, is used to point to the current directory. 
+We first load the necessary `tidyverse` package. Then we user `read_csv` from `readr` to store the data from the `collegedata.csv` file using a relative path. In order to form the relative path string a period, `.`, is used to point to the current directory.
 
 ```{r}
 #| warning: false
@@ -64,7 +64,6 @@ college.subset <- college.data |> select(INSTNM,SAT_AVG,ADM_RATE)
 head(college.subset)
 ```
 
-
 ## Task 4: Create a scatterplot for SAT_AVG and ADM_RATE (Remove NA)
 
 A scatterplot can be created for SAT_AVG and ADM_RATE using the function `ggplot` from the `ggplot2` package to create a ggplot object. Then, adding `geom_point` to the ggplot object will render a scatterplot. The NA values are omitted using the `na.rm` argument inside of the `geom_point` function.
@@ -75,7 +74,6 @@ e <- ggplot(data = college.subset,
             aes(x=ADM_RATE,y=SAT_AVG))
 e+geom_point(na.rm = TRUE, shape=3,position="jitter")+labs(title = "SAT Average vs Admission Rate")
 ```
-
 
 ## Submission
 
