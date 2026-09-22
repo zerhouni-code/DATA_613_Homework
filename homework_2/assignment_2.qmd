@@ -46,11 +46,11 @@ head(college.data)
 
 ## Task 2: Determine rows and columns
 
-The number of rows and columns in a data set can be displayed using the `str` 
+The number of rows and columns in a data set can be displayed using the `glimpse` function in the `dplyr` package. It also displays information about the data type of each column.
 
 ```{r}
+dplyr::glimpse(college.data)
 ```
-
 
 - Task 3: Use tidyverse to select INSTNM, SAT_AVG, and ADM_RATE
 
