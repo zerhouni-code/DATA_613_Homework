@@ -38,6 +38,7 @@ We first load the necessary `tidyverse` package. Then we user `read_csv` from `r
 #| warning: false
 require(tidyverse)
 
+# Read in the data from the data folder 
 suppressMessages(
   college.data <- readr::read_csv(file = "./data/collegedata.csv")
 )
@@ -49,6 +50,7 @@ head(college.data)
 The number of rows and columns in a data set can be displayed using the `glimpse` function in the `dplyr` package. It also displays information about the data type of each column.
 
 ```{r}
+# Present the structure of the data
 dplyr::glimpse(college.data)
 ```
 
@@ -57,12 +59,23 @@ dplyr::glimpse(college.data)
 The `select` function of `dplyr` is used to save a subset of the data only including the columns INSTNM, SAT_AVG, and ADM_RATE.
 
 ```{r}
+# Select a subset of the data
 college.subset <- college.data |> select(INSTNM,SAT_AVG,ADM_RATE)
 head(college.subset)
 ```
 
 
-- Task 4: Create a scatterplot for SAT_AVG and ADM_RATE (Remove NA)
+## Task 4: Create a scatterplot for SAT_AVG and ADM_RATE (Remove NA)
+
+A scatterplot can be created for SAT_AVG and ADM_RATE using the function `ggplot` from the `ggplot2` package to create a ggplot object. Then, adding `geom_point` to the ggplot object will render a scatterplot. The NA values are omitted using the `na.rm` argument inside of the `geom_point` function.
+
+```{r}
+# Create a scatterplot of SAT_AVG vs ADM_RATE
+e <- ggplot(data = college.subset,
+            aes(x=ADM_RATE,y=SAT_AVG))
+e+geom_point(na.rm = TRUE, shape=3,position="jitter")+labs(title = "SAT Average vs Admission Rate")
+```
+
 
 ## Submission
 
